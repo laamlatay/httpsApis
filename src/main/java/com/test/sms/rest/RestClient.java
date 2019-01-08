@@ -57,7 +57,7 @@ public class RestClient {
     }
 
     public String callGetAPI() {
-        GetMethod getMethod = new GetMethod("https://192.168.1.210:7070/test");
+        GetMethod getMethod = new GetMethod("https://self-signed.badssl.com/");
         int status1 = 0;
         String response = "";
         try {

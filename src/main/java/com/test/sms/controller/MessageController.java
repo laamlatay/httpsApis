@@ -1,6 +1,5 @@
 package com.test.sms.controller;
 
-
 import com.test.sms.rest.RestClient;
 import org.json.JSONObject;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Map;
-
 
 @Controller()
 public class MessageController {
@@ -78,7 +76,6 @@ public class MessageController {
 
     @PostMapping("/sms-client/receive")
     public ResponseEntity<Object> processMessage(@RequestParam String To, @RequestParam String From, @RequestParam String Body) {
-
 
         if (Body == null || From == null || To == null) {
             System.out.println("Body, From and/or To parameters not supplied while calling /message/outbound API.");
